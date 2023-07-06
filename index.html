@@ -1,0 +1,29 @@
+<head></head>
+<body>
+    <style>
+            .slds-visual-picker_vertical .slds-visual-picker__figure {
+                height: inherit !important;
+            }
+
+            .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+                display: inline-flex !important;
+            }
+    </style>
+    <script src="https:/https://morgana2022--acceptance.sandbox.lightning.force.com//lightning/lightning.out.js"></script>
+    <script>
+        $Lightning.use("runtime_appointmentbooking:lightningOutGuest",    // name of the Lightning app
+            function() {                  
+                $Lightning.createComponent(
+                   "lightning:flow", // top-level component of your app
+                    { },                  // attributes to set on the component when created
+                    "lightningLocator",   // the DOM location to insert the component
+                    function(cmp) {
+                        console.log('Hi from callback');// callback when component is created and active on the page
+                        cmp.startFlow("Inbound_New_Guest_Appointment_custom");
+                    }
+                );
+            }, "https://morgana2022--acceptance.sandbox.my.site.com"  // Community endpoint
+        );
+    </script>
+<div id="lightningLocator"></div>
+</body>

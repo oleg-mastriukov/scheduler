@@ -1,48 +1,31 @@
 <head></head>
 <body>
     <style>
-        .slds-visual-picker_vertical .slds-visual-picker__figure {
-            height: inherit !important;
-        }
+            .slds-visual-picker_vertical .slds-visual-picker__figure {
+                height: inherit !important;
+            }
 
-        .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
-            display: inline-flex !important;
-        }
+            .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+                display: inline-flex !important;
+            }
     </style>
     <script src="https://morgana.lightning.force.com/lightning/lightning.out.js"></script>
     <script>
-        $Lightning.use("runtime_appointmentbooking:lightningOutGuest", function() {
-            $Lightning.createComponent(
-                "lightning:flow",
-                {
-                    ValueFromSite: '', // Set the default value for ValueFromSite parameter as empty
-                },
-                "lightningLocator",
-                function(cmp) {
-                    console.log('Hi from callback');
-                    cmp.startFlow("Inbound_New_Guest_Appointment_custom");
-                }
-            );
-        }, "https://morgana.my.site.com");
-
-        // Function to handle input field change and update the ValueFromSite parameter
-        function handleInputChange(event) {
-            var value = event.target.value;
-            $Lightning.createComponent(
-                "lightning:flow",
-                {
-                    ValueFromSite: value, // Update the ValueFromSite parameter with the input field value
-                },
-                "lightningLocator",
-                function(cmp) {
-                    console.log('Hi from callback');
-                    cmp.startFlow("Inbound_New_Guest_Appointment_custom");
-                }
-            );
-        }
+        $Lightning.use("runtime_appointmentbooking:lightningOutGuest",    // name of the Lightning app
+            function() {                  
+                $Lightning.createComponent(
+                   "lightning:flow", // top-level component of your app
+                    { 
+                        ValueFromSite: 'Default value' // Set the default value for ValueFromSite parameter
+                    },                  
+                    "lightningLocator",   // the DOM location to insert the component
+                    function(cmp) {
+                        console.log('Hi from callback');
+                        cmp.startFlow("Inbound_New_Guest_Appointment_custom");
+                    }
+                );
+            }, "https://morgana.my.site.com"  // Community endpoint
+        );
     </script>
-    <div id="lightningLocator">
-        <!-- Input field for ValueFromSite -->
-        <input type="text" id="valueFromSiteInput" onchange="handleInputChange(event)">
-    </div>
+<div id="lightningLocator"></div>
 </body>

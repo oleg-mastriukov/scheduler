@@ -24,39 +24,39 @@
 
 
 
-<script>
+    <script>
+        // Initialize variables
+        let eventCategory = 'Your Category';
+        let eventAction = 'Your Action';
+        let eventLabel = 'Your Label';
+        
+        // Function to fire event
         function fireEvent() {
             // Fire event to Google Tag Manager
             console.log('FIRING EVENT');
-
-            console.log('GTMDATA - EVENT::::: ' + window.event);
-            console.log('GTMDATA - CATEGORY::::: ' + window.eventCategory);
-            console.log('GTMDATA - ACTION::::: ' + window.eventAction);
-            console.log('GTMDATA - LABEL::::: ' + window.eventLabel);
-
+        
+            console.log('GTMDATA - EVENT::::: salesforce_event');
+            console.log('GTMDATA - CATEGORY::::: ' + eventCategory);
+            console.log('GTMDATA - ACTION::::: ' + eventAction);
+            console.log('GTMDATA - LABEL::::: ' + eventLabel);
+        
             let gtmData = {
                 event: 'salesforce_event',
-                eventCategory: 'TEST',
-                eventAction: 'TEST',
-                eventLabel: 'TEST'
+                eventCategory: eventCategory,
+                eventAction: eventAction,
+                eventLabel: eventLabel
             };
-
+        
             console.log('DATALAYER BEFORE PUSHING:::::: ', JSON.stringify(window.dataLayer));
             // Push the data to the dataLayer
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push(gtmData);
             console.log('DATALAYER AFTER PUSHING:::::: ', JSON.stringify(window.dataLayer));
         }
-
-        // Set the values for the event properties
-        window.event = 'sample_event';
-        window.eventCategory = 'sample_category';
-        window.eventAction = 'sample_action';
-        window.eventLabel = 'sample_label';
-
-        // Execute the fireEvent function
+        
+        // Call the function
         fireEvent();
-    </script>
+        </script>
 
 
     <script src="https://morgana2022--acceptance.sandbox.lightning.force.com/lightning/lightning.out.js"></script>

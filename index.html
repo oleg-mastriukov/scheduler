@@ -24,39 +24,12 @@
 
 
 
-    <script>
-        // Initialize variables
-        let eventCategory = 'Your Category';
-        let eventAction = 'Your Action';
-        let eventLabel = 'Your Label';
-        
-        // Function to fire event
-        function fireEvent() {
-            // Fire event to Google Tag Manager
-            console.log('FIRING EVENT');
-        
-            console.log('GTMDATA - EVENT::::: salesforce_event');
-            console.log('GTMDATA - CATEGORY::::: ' + eventCategory);
-            console.log('GTMDATA - ACTION::::: ' + eventAction);
-            console.log('GTMDATA - LABEL::::: ' + eventLabel);
-        
-            let gtmData = {
-                event: 'salesforce_event',
-                eventCategory: eventCategory,
-                eventAction: eventAction,
-                eventLabel: eventLabel
-            };
-        
-            console.log('DATALAYER BEFORE PUSHING:::::: ', JSON.stringify(window.dataLayer));
-            // Push the data to the dataLayer
-            window.dataLayer = window.dataLayer || [];
-            window.dataLayer.push(gtmData);
-            console.log('DATALAYER AFTER PUSHING:::::: ', JSON.stringify(window.dataLayer));
-        }
-        
-        // Call the function
-        fireEvent();
-        </script>
+    <a href="#" name="button1" onclick="window.dataLayer.push({
+        'event': 'salesforce_event',
+        'eventCategory': 'TEST',
+        'eventAction': 'TEST',
+        'eventLabel': 'TEST'
+      }); return false;">Button 1</a>
 
 
     <script src="https://morgana2022--acceptance.sandbox.lightning.force.com/lightning/lightning.out.js"></script>

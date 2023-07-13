@@ -23,6 +23,15 @@
             }
     </style>
 
+    <script>
+        window.addEventListener('message', function(event) { 
+        
+            console.log('Received message:  ', event.data);
+            if (event.data.key === 'MyMessage') {
+                console.log('EVENTHANDLINGLOGIC would run here lalalalaa');
+        }});
+    </script>
+
 
     <!-- <script>
         // Replace 'myCustomEvent' with your actual custom event name

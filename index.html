@@ -1,31 +1,34 @@
 <head>
+    <title>Morgana Scheduler</title>
+    <style>
+        .slds-visual-picker_vertical .slds-visual-picker__figure {
+            height: inherit !important;
+        }
+
+        .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+            display: inline-flex !important;
+        }
+    </style>
     <!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-T82VLNR');</script>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-T82VLNR');
+    </script>
     <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="sass/main.scss">
 </head>
 <body>
     <h1>test</h1>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T82VLNR"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T82VLNR"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <style>
-            .slds-visual-picker_vertical .slds-visual-picker__figure {
-                height: inherit !important;
-            }
-
-            .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
-                display: inline-flex !important;
-            }
-    </style>
 
     <script>
-        window.addEventListener('message', function(event) { 
-        
+        window.addEventListener('message', function(event) {
+
             console.log('Received message:  ', event.data);
             if (event.data.key === 'MyMessage') {
                 console.log('EVENTHANDLINGLOGIC would run here lalalalaa');
@@ -43,10 +46,10 @@
     <script src="https://morgana2022--acceptance.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
     <script>
         $Lightning.use("runtime_appointmentbooking:lightningOutGuest",    // name of the Lightning app
-            function() {                  
+            function() {
                 $Lightning.createComponent(
                    "lightning:flow", // top-level component of your app
-                    {},                  
+                    {},
                     "lightningLocator",   // the DOM location to insert the component
                     function(cmp) {
                         var inputVariables = [
@@ -63,6 +66,6 @@
             }, "https://morgana2022--acceptance.sandbox.my.site.com"  // Community endpoint
         );
     </script>
-    
+
 <div id="lightningLocator"></div>
 </body>

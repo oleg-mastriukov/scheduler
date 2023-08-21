@@ -30,18 +30,20 @@
     <script>
         window.addEventListener('message', function(event) {
             console.log('Received event: ', event);
-            console.log('Received event.data: ', event.data);
-            // Replace 'myCustomEvent' with your actual custom event name
-            dataLayer.push({
-                event: 'salesforce_event',
-                date: event.data.date,
-                email:event.data.email,
-                first_name:event.data.first_name,
-                last_name:event.data.last_name,
-                name:event.data.name,
-                store:event.data.store,
-                time:event.data.time
-            })
+            console.log('Received event.data.name: ', event.data.name);
+            
+            if(event.data.name=='Salesforce_Scheduler') {
+                dataLayer.push({
+                    event: 'salesforce_event',
+                    date: event.data.date,
+                    email:event.data.email,
+                    first_name:event.data.first_name,
+                    last_name:event.data.last_name,
+                    name:event.data.name,
+                    store:event.data.store,
+                    time:event.data.time
+                })
+            }
         });
     </script>
 

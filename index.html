@@ -33,7 +33,7 @@
                 
                 console.log('Received event: ', event);
 
-                <!-- dataLayer.push({
+                dataLayer.push({
                     event: 'salesforce_event',
                     date: event.data.date,
                     email:event.data.email,
@@ -42,14 +42,10 @@
                     name:event.data.name,
                     store:event.data.store,
                     time:event.data.time
-                }) -->
+                })
             }
         });
     </script>
-
-
-
-
 
     <script src="https://morgana2022--acceptance.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
     <script>
@@ -60,15 +56,16 @@
                     {},
                     "lightningLocator",   // the DOM location to insert the component
                     function(cmp) {
-                        var inputVariables = [
+                        <!-- var inputVariables = [
                                 {
                                     name : 'ValueFromSite',
                                     type : 'String',
                                     value : 'test'
                                 }
-                                ];
+                                ]; -->
                         console.log('Hi from callback');
-                        cmp.startFlow("Inbound_New_Guest_Appointment_custom", inputVariables);
+                        cmp.startFlow("Inbound_New_Guest_Appointment_custom");
+                        //cmp.startFlow("Inbound_New_Guest_Appointment_custom", inputVariables);
                     }
                 );
             }, "https://morgana2022--acceptance.sandbox.my.site.com"  // Community endpoint

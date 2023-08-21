@@ -56,16 +56,15 @@
                     {},
                     "lightningLocator",   // the DOM location to insert the component
                     function(cmp) {
-                        // var inputVariables = [
-                         //       {
-                         //           name : 'ValueFromSite',
-                         //           type : 'String',
-                         //           value : 'test'
-                         //       }
-                         //       ];
+                         var inputVariables = [
+                                {
+                                    name : 'ValueFromSite',
+                                    type : 'String',
+                                    value : 'hello from website'
+                                }
+                                ];
                         console.log('Hi from callback');
-                        cmp.startFlow("Inbound_New_Guest_Appointment_custom");
-                        //cmp.startFlow("Inbound_New_Guest_Appointment_custom", inputVariables);
+                        cmp.startFlow("Inbound_New_Guest_Appointment_custom", inputVariables);
                     }
                 );
             }, "https://morgana2022--acceptance.sandbox.my.site.com"  // Community endpoint

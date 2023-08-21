@@ -9,6 +9,7 @@
             display: inline-flex !important;
         }
     </style>
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -17,11 +18,9 @@
         })(window,document,'script','dataLayer','GTM-NSR8848Z');
     </script>
     <!-- End Google Tag Manager -->
-<!--    <link rel="stylesheet" href="sass/main.scss">-->
-    <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
-    <h1>test</h1>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSR8848Z"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -56,8 +55,15 @@
                     {},
                     "lightningLocator",   // the DOM location to insert the component
                     function(cmp) {
+                         var inputVariables = [
+                                {
+                                    name : 'ValueFromSite',
+                                    type : 'String',
+                                    value : 'hello from webstite'
+                                }
+                                ];
                         console.log('Hi from callback');
-                        cmp.startFlow("Inbound_New_Guest_Appointment_custom");
+                        cmp.startFlow("Inbound_New_Guest_Appointment_custom", inputVariables);
                     }
                 );
             }, "https://morgana2022--acceptance.sandbox.my.site.com"  // Community endpoint

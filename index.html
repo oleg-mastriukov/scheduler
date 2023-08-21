@@ -29,10 +29,10 @@
 
     <script>
         window.addEventListener('message', function(event) {
-            console.log('Received event: ', event);
-            console.log('Received event.data.name: ', event.data.name);
-            
             if(event.data.name=='Salesforce_Scheduler') {
+                
+                console.log('Received event: ', event);
+
                 dataLayer.push({
                     event: 'salesforce_event',
                     date: event.data.date,

@@ -29,8 +29,9 @@
 
     <script>
         window.addEventListener('message', function(event) {
-
-            console.log('Received message:  ', event.data);
+            console.log('event:', event);
+            console.log('event.data:  ', event.data);
+            console.log('event.data.key:', event.data.key);
             if (event.data.key === 'sfgtm') {
                 console.log('EVENTHANDLINGLOGIC would run here lalalalaa');
                     // Replace 'myCustomEvent' with your actual custom event name

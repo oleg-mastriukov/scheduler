@@ -29,16 +29,11 @@
 
     <script>
         window.addEventListener('message', function(event) {
-            console.log('event:', event);
-            console.log('event.data:  ', event.data);
-            console.log('event.data.key:', event.data.key);
-            if (event.data.key === 'sfgtm') {
-                console.log('EVENTHANDLINGLOGIC would run here lalalalaa');
-                    // Replace 'myCustomEvent' with your actual custom event name
-                    dataLayer.push({
-                      'event': 'salesforce_event'
-                    })
-        }});
+            console.log('Received event: ', event);
+            console.log('Received event.data: ', event.data);
+            // Replace 'myCustomEvent' with your actual custom event name
+            dataLayer.push({'event': 'salesforce_event'})
+        });
     </script>
 
 

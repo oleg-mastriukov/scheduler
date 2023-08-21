@@ -29,7 +29,7 @@
 
     <script>
         window.addEventListener('message', function(event) {
-            if(event.data.name=='Salesforce_Scheduler') {
+            if(event.data.event=='Salesforce_Scheduler') {
                 
                 console.log('Received event: ', event);
 
@@ -39,7 +39,7 @@
                     email:event.data.email,
                     first_name:event.data.first_name,
                     last_name:event.data.last_name,
-                    event:event.data.event,
+                    name:event.data.name,
                     store:event.data.store,
                     time:event.data.time
                 })

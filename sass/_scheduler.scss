@@ -33,6 +33,14 @@
     src: local("DIN Pro Light"),url(../fonts/DINPro-Light.woff) format("woff")
 }
 
+:root {
+    --lwc-colorBackgroundToastError: #BD122F !important;
+    --lwc-colorTextError: #BD122F !important;
+    --lwc-colorBackgroundPathLost: #BD122F !important;
+    --lwc-colorTextDestructive: #BD122F !important;
+    --lwc-colorBorderError: #BD122F !important;
+}
+
 #lightningLocator {
     * {
         font-family: 'DIN Pro', Verdana, sans-serif;

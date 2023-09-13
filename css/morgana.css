@@ -34,6 +34,8 @@
   --lwc-colorBackgroundPathLost: #BD122F !important;
   --lwc-colorTextDestructive: #BD122F !important;
   --lwc-colorBorderError: #BD122F !important;
+  --lwc-colorBackgroundPathActive: #f49704 !important;
+  --lwc-colorBackgroundPathComplete: #80a7ae !important;
 }
 
 #lightningLocator * {
@@ -115,6 +117,19 @@
 #lightningLocator .uiAutocompleteList .googleLogo {
   display: none;
 }
+#lightningLocator .uiInput--lookup .lookup__item.highlighted a {
+  background-color: #05254e;
+  color: #ffffff !important;
+}
+#lightningLocator .uiInput--lookup .lookup__item.highlighted a .uiOutputText {
+  color: #ffffff !important;
+}
+#lightningLocator .slds-rich-text-editor__output #for-dave-operatinghours,
+#lightningLocator .slds-rich-text-editor__output #for-dave-holidays {
+  font-size: 13px !important;
+  color: #7b7b7b !important;
+  margin-bottom: 24px;
+}
 #lightningLocator .runtime_appointmentbookingFlowLocation .uiInput--input {
   width: 100%;
   height: calc(var(--lwc-heightInput, 1.875rem) + var(--lwc-borderWidthThin, 1px) * 2);
@@ -148,4 +163,4 @@
   display: none;
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=morgana.css.map */

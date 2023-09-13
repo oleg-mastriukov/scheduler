@@ -39,6 +39,8 @@
     --lwc-colorBackgroundPathLost: #BD122F !important;
     --lwc-colorTextDestructive: #BD122F !important;
     --lwc-colorBorderError: #BD122F !important;
+    --lwc-colorBackgroundPathActive: #f49704 !important;
+    --lwc-colorBackgroundPathComplete: #80a7ae !important;
 }
 
 #lightningLocator {
@@ -148,6 +150,23 @@
 
     .uiAutocompleteList .googleLogo {
         display: none;
+    }
+
+
+    .uiInput--lookup .lookup__item.highlighted a {
+        background-color: #05254e;
+        color: #ffffff !important;
+    }
+
+    .uiInput--lookup .lookup__item.highlighted a .uiOutputText {
+        color: #ffffff !important;
+    }
+
+    .slds-rich-text-editor__output #for-dave-operatinghours,
+    .slds-rich-text-editor__output #for-dave-holidays {
+        font-size: 13px !important;
+        color: #7b7b7b !important;
+        margin-bottom: 24px;
     }
 
     .runtime_appointmentbookingFlowLocation {

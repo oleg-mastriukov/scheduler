@@ -18,6 +18,8 @@
     --lwc-colorBackgroundPathLost: #F51D27 !important;
     --lwc-colorTextDestructive: #F51D27 !important;
     --lwc-colorBorderError: #F51D27 !important;
+    --lwc-colorBackgroundPathActive: #212121 !important;
+    --lwc-colorBackgroundPathComplete: #00D75E !important;
 }
 
 #lightningLocator {
@@ -146,6 +148,22 @@
 
     .slds-text-heading_medium {
         color: #212121;
+    }
+
+    .uiInput--lookup .lookup__item.highlighted a {
+        background-color: #212121;
+        color: #ffffff !important;
+    }
+
+    .uiInput--lookup .lookup__item.highlighted a .uiOutputText {
+        color: #ffffff !important;
+    }
+
+    .slds-rich-text-editor__output #for-dave-operatinghours,
+    .slds-rich-text-editor__output #for-dave-holidays {
+        font-size: 13px !important;
+        color: #7b7b7b !important;
+        margin-bottom: 24px;
     }
 
     .actionButtonBar {

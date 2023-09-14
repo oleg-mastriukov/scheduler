@@ -124,8 +124,8 @@
 #lightningLocator .uiInput--lookup .lookup__item.highlighted a .uiOutputText {
   color: #ffffff !important;
 }
-#lightningLocator .slds-rich-text-editor__output #for-dave-operatinghours,
-#lightningLocator .slds-rich-text-editor__output #for-dave-holidays {
+#lightningLocator .slds-rich-text-editor__output #operating-hours,
+#lightningLocator .slds-rich-text-editor__output #holidays {
   font-size: 13px !important;
   color: #7b7b7b !important;
   margin-bottom: 24px;

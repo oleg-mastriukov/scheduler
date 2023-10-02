@@ -9,47 +9,10 @@
             display: inline-flex !important;
         }
     </style>
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NSR8848Z');
-    </script>
-    <!-- End Google Tag Manager -->
-
     <link rel="stylesheet" href="css/morgana.css">
 </head>
 <body>
-    <h1>test5</h1>
-
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSR8848Z"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-
-    <script>
-        window.addEventListener('message', function(event) {
-            if(event.data.event=='Salesforce_Scheduler') {
-
-                console.log('Received event: ', event);
-
-                dataLayer.push({
-                    event: 'salesforce_event',
-                    date: event.data.date,
-                    email:event.data.email,
-                    first_name:event.data.first_name,
-                    last_name:event.data.last_name,
-                    name:event.data.name,
-                    store:event.data.store,
-                    time:event.data.time
-                })
-            }
-        });
-    </script>
-
-    <script src="https://innovation-connect-2296.scratch.lightning.force.com/lightning/lightning.out.js"></script>
+    <script src="https://morgana2022--acceptance.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
     <script>
         $Lightning.use("runtime_appointmentbooking:lightningOutGuest",    // name of the Lightning app
             function() {
@@ -62,14 +25,28 @@
                                 {
                                     name : 'ext_brand',
                                     type : 'String',
-                                    value : 'Morgana'
+                                    value : ''
+                                },
+                                {
+                                    name : 'ext_client_id',
+                                    type : 'String',
+                                    value : ''
+                                },
+                                                             {
+                                    name : 'ext_session_id',
+                                    type : 'String',
+                                    value : ''
+                                },                                {
+                                    name : 'ext_page',
+                                    type : 'String',
+                                    value : ''
                                 }
                                 ];
                         console.log('Hi from callback');
                         cmp.startFlow("Inbound_New_Guest_Appointment_custom", inputVariables);
                     }
                 );
-            }, "	https://innovation-connect-2296.scratch.my.site.com"  // Community endpoint
+            }, "https://morgana2022--acceptance.sandbox.my.site.com"  // Community endpoint
         );
     </script>
 

@@ -74,6 +74,9 @@
   line-height: 1.5;
   color: #05254e;
 }
+#lightningLocator .slds-visual-picker_vertical .slds-visual-picker__figure {
+  height: auto;
+}
 #lightningLocator .slds-visual-picker input:checked ~ label .slds-visual-picker__text {
   border-color: #80a7ae;
   box-shadow: 0 0 0 1px #80a7ae inset;
@@ -111,8 +114,15 @@
 #lightningLocator .slds-radio--button [type=radio]:checked + .slds-radio--button__label {
   background-color: #80a7ae;
 }
+#lightningLocator input[type=text]:not(:read-only):focus {
+  border-color: #80a7ae;
+  box-shadow: 0 0 20px rgba(128, 167, 174, 0.3);
+}
 #lightningLocator .slds-input-has-icon .slds-input__icon.searchIcon {
   top: 70%;
+}
+#lightningLocator .slds-input {
+  font-weight: bold;
 }
 #lightningLocator .uiAutocompleteList .googleLogo {
   display: none;

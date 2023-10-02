@@ -90,6 +90,10 @@
     }
 
     .slds-visual-picker {
+        &_vertical .slds-visual-picker__figure {
+            height: auto;
+        }
+
         input:checked ~ label {
             .slds-visual-picker__text {
                 border-color: #80a7ae;
@@ -144,8 +148,17 @@
         }
     }
 
+    input[type=text]:not(:read-only):focus {
+        border-color: #80a7ae;
+        box-shadow: 0 0 20px rgba(128,167,174,.3);
+    }
+
     .slds-input-has-icon .slds-input__icon.searchIcon {
         top: 70%;
+    }
+
+    .slds-input {
+        font-weight: bold;
     }
 
     .uiAutocompleteList .googleLogo {

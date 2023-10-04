@@ -18,10 +18,84 @@
   --lwc-colorBorderError: #F51D27 !important;
   --lwc-colorBackgroundPathActive: #212121 !important;
   --lwc-colorBackgroundPathComplete: #00D75E !important;
+  --lwc-fontSize1: 1rem !important;
+  --lwc-fontSize2: 1.2rem !important;
+  --lwc-fontSize3: 1.3rem !important;
+  --lwc-fontSize5: 1.6rem !important;
+  --lwc-fontSize4: 1.4rem !important;
+  --lwc-fontSize7: 2rem !important;
+  --lwc-fontSize6: 1.8rem !important;
+  --lwc-spacingMedium: 1.6rem !important;
+  --lwc-heightSalesPath: 3.2rem !important;
+  --lwc-spacingXSmall: 0.8rem !important;
+  --lwc-colorPickerSelectorWidth: 22.4rem !important;
+  --lwc-nubbinSizeDefault: 1.6rem !important;
+  --lwc-varSpacingHorizontalSmall: 1.2rem !important;
+  --lwc-colorPickerSliderHeight: 2.4rem !important;
+  --lwc-heightFooter: 6rem !important;
+  --lwc-fontSizeTextXxSmall: 1rem !important;
+  --lwc-lineHeightButtonSmall: 2.8rem !important;
+  --lwc-brandBandImageHeightMedium: 20rem !important;
+  --lwc-welcomeMatSpacingInfo: 12.4rem !important;
+  --lwc-sizeMedium: 32rem !important;
+  --lwc-squareTappableSmall: 3.2rem !important;
+  --lwc-welcomeMatCheckSize: 1rem !important;
+  --lwc-welcomeMatWidth: 83.3rem !important;
+  --lwc-varSpacingLarge: 2.4rem !important;
+  --lwc-formLabelFontSize: 1.2rem !important;
+  --lwc-fontSizeTextXLarge: 2rem !important;
+  --lwc-squareIconUtilitySmall: 1.6rem !important;
+  --lwc-widthStageLeftCollapsed: 6.4rem !important;
+  --lwc-squareIconXSmallBoundary: 2rem !important;
+  --lwc-fontSizeHeadingXLarge: 2.8rem !important;
+  --lwc-fontSizeHeadingXxSmall: 1rem !important;
+  --lwc-spacingXxxSmall: 0.2rem !important;
+  --lwc-pageHeaderSpacingMargin: 0 !important;
+  --lwc-varSpacingVerticalXxSmall: 0.4rem !important;
+  --lwc-varSpacingVerticalLarge: 2.4rem !important;
+  --lwc-sizeSmall: 24rem !important;
+  --lwc-varSpacingHorizontalXxSmall: 0.4rem !important;
+  --lwc-varSpacingMedium: 1.6rem !important;
+  --lwc-varSpacingXxLarge: 4.8rem !important;
+  --lwc-varSpacingXxSmall: 0.4rem !important;
+  --lwc-heightHeader: 5rem !important;
+  --lwc-welcomeMatFontSizeInfoTitle: 4.2rem !important;
+  --lwc-sizeXLarge: 64rem !important;
+  --lwc-varSquareIconMediumBoundary: 3.2rem !important;
+  --lwc-varSpacingHorizontalXLarge: 3.2rem !important;
+  --lwc-squareIconSmallBoundary: 2.4rem !important;
+  --lwc-sizeXxLarge: 96rem !important;
+  --lwc-sizeXxxSmall: 4.8rem !important;
+  --lwc-fontSizeMedium: 1.3rem !important;
+  --lwc-brandBandImageHeightSmall: 9.6rem !important;
+  --lwc-fontSizeMediumA: 1.4rem !important;
+  --lwc-borderRadiusMedium: 0.4rem !important;
+  --lwc-squareIconXxSmallBoundary: 1.6rem !important;
+  --lwc-squareIconMediumBoundary: 3.2rem !important;
+  --lwc-cardSpacingLarge: 2.4rem !important;
+  --lwc-cardSpacingMargin: 1.6rem !important;
+  --lwc-squareIconXxSmallContent: 1.4rem !important;
+  --lwc-sizeXSmall: 19.2rem !important;
+  --lwc-splitViewWidth: 40rem !important;
+  --lwc-sizeLarge: 40rem !important;
+  --lwc-squareIconLarge: 5rem !important;
+  --lwc-spinnerSizeXSmall: 1.6rem !important;
+  --lwc-sliderHandleSize: 1.6rem !important;
+  --lwc-sliderTrackHeight: 6.4px !important;
+  --lwc-squareIconMedium: 3.2rem !important;
+  --lwc-fontSizeXSmall: 1rem !important;
+  --lwc-varSpacingXxxSmall: 0.2rem !important;
+  --lwc-fontSizeXxLarge: 2.8rem !important;
+  --lwc-squareTappable: 4.4rem !important;
+  --lwc-heightInput: 3rem !important;
+  --lwc-fontSizeSmall: 1.2rem !important;
+  --lwc-inputStaticFontSize: 1.3rem !important;
+  --lwc-squareIconMediumContent: 1.6rem !important;
 }
 
 #lightningLocator {
   color: #212121;
+  font-size: 1.6rem;
 }
 #lightningLocator * {
   font-family: "Beausite", Helvetica, Arial, sans-serif;
@@ -56,7 +130,7 @@
   line-height: 1.5;
 }
 #lightningLocator .slds-text-body_regular {
-  font-size: 1rem;
+  font-size: 1.6rem;
   line-height: 1.5;
   color: #212121;
 }
@@ -67,13 +141,21 @@
 #lightningLocator .slds-visual-picker input:checked ~ label .slds-visual-picker__text:after {
   border-right-color: #212121;
   border-top-color: #212121;
+  border-width: 1.6rem;
 }
 #lightningLocator .slds-visual-picker input:not(:disabled) ~ label:hover .slds-visual-picker__figure {
   border-color: #212121;
   box-shadow: 0 0 0 1px #212121 inset;
 }
+#lightningLocator .slds-visual-picker__text-check {
+  top: 0.3rem;
+  right: 1.3rem;
+}
 #lightningLocator .slds-button.slds-button_neutral {
   color: #212121;
+}
+#lightningLocator .slds-path__nav .slds-is-incomplete .slds-path__link {
+  text-decoration: none;
 }
 #lightningLocator .slds-radio_button {
   color: #212121;
@@ -108,8 +190,8 @@
 }
 #lightningLocator .runtime_appointmentbookingFlowLocation .uiInput--input {
   width: 100%;
-  height: calc(var(--lwc-heightInput, 1.875rem) + var(--lwc-borderWidthThin, 1px) * 2);
-  padding: 0.5rem;
+  height: calc(var(--lwc-heightInput, 3rem) + var(--lwc-borderWidthThin, 1px) * 2);
+  padding: 0.8rem;
 }
 #lightningLocator .slds-text-heading_medium {
   color: #212121;
@@ -132,13 +214,13 @@
   font-family: "Beausite", Helvetica, Arial, sans-serif;
   background-color: #212121;
   border-color: #212121;
-  border-radius: 0.25rem;
-  height: 3rem;
-  line-height: 3rem;
-  padding: 1rem 1.5rem 1rem 1rem;
+  border-radius: 0.4rem;
+  height: 4.8rem;
+  line-height: 4.8rem;
+  padding: 1.6rem 2.4rem 1.6rem 1.6rem;
   transition: background-color 0.2s ease-in-out;
-  font-size: 1rem;
-  margin-left: 1rem;
+  font-size: 1.6rem;
+  margin-left: 1.6rem;
 }
 #lightningLocator .actionButtonBar .flow-button__NEXT:before,
 #lightningLocator .actionButtonBar .flow-button__FINISH:before {
@@ -162,7 +244,7 @@
   box-shadow: none;
 }
 #lightningLocator .actionButtonBar .flow-button__BACK {
-  border-radius: 0.25rem;
+  border-radius: 0.4rem;
   color: #212121;
 }
 #lightningLocator .actionButtonBar .flow-button__BACK:hover {
@@ -172,6 +254,29 @@
 }
 #lightningLocator .forceAddressAutocomplete .logoFooter {
   display: none;
+}
+#lightningLocator .runtime_appointmentbookingFlowWorkType .responsiveCard {
+  max-width: 40rem;
+}
+#lightningLocator .slds-path__item {
+  margin-left: 0.6rem;
+  margin-right: 0.7rem;
+  min-width: 8rem;
+}
+#lightningLocator .slds-path__item :after {
+  height: 1.6rem;
+}
+#lightningLocator .slds-path__item:first-child:before,
+#lightningLocator .slds-path__item:first-child:after {
+  left: 1.8rem;
+}
+#lightningLocator .slds-path__item:before,
+#lightningLocator .slds-path__item:after {
+  right: -0.5rem;
+  left: -0.5rem;
+}
+#lightningLocator .slds-input__icon-group {
+  margin-top: -1rem;
 }
 
 /*# sourceMappingURL=ergosleep.css.map */

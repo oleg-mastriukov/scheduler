@@ -39,13 +39,9 @@
     <!-- !!!! The most important part, this is an example of the listener that takes the event from Scheduler/Salesforce and reprocesses this to GTM / GA by publishing to the data layer -->
     <script>
         console.log('Listener starts here');
-        window.addEventListener('Messaging', function(event) {
+        window.addEventListener('sfgtm', function(event) {
             console.log('Listener started');
-            console.log('event.data.event: ', event.data.event);
-            if(event.data.event=='Salesforce_Scheduler') {
-                
                 console.log('Received event: ', event);
-
                 dataLayer.push({
                     event: 'salesforce_event',
                     date: event.data.date,
@@ -56,7 +52,6 @@
                     store:event.data.store,
                     time:event.data.time
                 })
-            }
         });
     </script>
 

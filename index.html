@@ -1,4 +1,6 @@
 <head>
+    <!-- ?? Test page head markup, you can ignore this part. -->
+    <!-- ?? Assuming yo already have the google tag manager script running? -->
     <title>Morgana Scheduler</title>
     <style>
         .slds-visual-picker_vertical .slds-visual-picker__figure {
@@ -9,9 +11,55 @@
             display: inline-flex !important;
         }
     </style>
-    <link rel="stylesheet" href="css/ergosleep.css">
+
+    <!-- ?? GTM SCript - you have your own version running already? - so this can be ignored.  -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NSR8848Z');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="stylesheet" href="css/main.css">
 </head>
+
+
+
 <body>
+    <!-- ?? Test page head markup, you can ignore this part. -->
+    <h1>test2</h1>
+    
+     <!-- ?? GTM SCript - you have your own version running already? - so this can be ignored.  -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSR8848Z"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- !!!! Most important part, this is an example of the listener that takes the event from Scheduler/Salesforce and reprocesses this to GTM / GA by publishing to the data layer -->
+    <script>
+        window.addEventListener('message', function(event) {
+            if(event.data.event=='Salesforce_Scheduler') {
+                
+                console.log('Received event: ', event);
+
+                dataLayer.push({
+                    event: 'salesforce_event',
+                    date: event.data.date,
+                    email:event.data.email,
+                    first_name:event.data.first_name,
+                    last_name:event.data.last_name,
+                    name:event.data.name,
+                    store:event.data.store,
+                    time:event.data.time
+                })
+            }
+        });
+    </script>
+
+
+    <!-- !!! This part is the scheduler snippet - here you need to pass the parameters -->
     <script src="https://morgana2022--acceptance.sandbox.lightning.force.com/lightning/lightning.out.js"></script>
     <script>
         $Lightning.use("runtime_appointmentbooking:lightningOutGuest",    // name of the Lightning app
@@ -23,23 +71,9 @@
                     function(cmp) {
                          var inputVariables = [
                                 {
-                                    name : 'ext_brand',
+                                    name : 'ValueFromSite',
                                     type : 'String',
-                                    value : 'Morgana'
-                                },
-                                {
-                                    name : 'ext_client_id',
-                                    type : 'String',
-                                    value : 'test_from_github_page'
-                                },
-                                                             {
-                                    name : 'ext_session_id',
-                                    type : 'String',
-                                    value : 'test_from_github_page'
-                                },                                {
-                                    name : 'ext_page',
-                                    type : 'String',
-                                    value : 'test_from_github_page'
+                                    value : 'hello from webstite'
                                 }
                                 ];
                         console.log('Hi from callback');

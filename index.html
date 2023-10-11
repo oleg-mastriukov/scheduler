@@ -44,7 +44,7 @@
                 console.log('Received event: ', JSON.stringify(event));
                 console.log('event.detail: ', event.detail);
                 console.log('event.detail.name: ', event.detail.name);
-                dataLayer.push({event.detail})
+                dataLayer.push(event.detail);
         });
     </script>
 

@@ -1,6 +1,6 @@
 <head>
     <!-- ?? Test page head markup, you can ignore this part. -->
-    <!-- ?? Assuming yo already have the google tag manager script running? -->
+    <!-- ?? Assuming you already have the Google Tag Manager script running? -->
     <title>Morgana Scheduler</title>
     <style>
         .slds-visual-picker_vertical .slds-visual-picker__figure {
@@ -12,7 +12,7 @@
         }
     </style>
 
-    <!-- ?? GTM SCript - you have your own version running already? - so this can be ignored.  -->
+    <!-- ?? GTM SCript - Do you have your own version running already? - so this can be ignored.  -->
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -30,13 +30,13 @@
 <body>
     <!-- ?? Test page head markup, you can ignore this part. -->
     
-     <!-- ?? GTM SCript - you have your own version running already? - so this can be ignored.  -->
+     <!-- ?? GTM SCript - Do you have your own version running already? - so this can be ignored.  -->
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSR8848Z"
         height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <!-- !!!! Most important part, this is an example of the listener that takes the event from Scheduler/Salesforce and reprocesses this to GTM / GA by publishing to the data layer -->
+    <!-- !!!! The most important part, this is an example of the listener that takes the event from Scheduler/Salesforce and reprocesses this to GTM / GA by publishing to the data layer -->
     <script>
         window.addEventListener('message', function(event) {
             if(event.data.event=='Salesforce_Scheduler') {

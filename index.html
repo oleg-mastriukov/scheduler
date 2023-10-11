@@ -42,6 +42,7 @@
         window.addEventListener('sfgtm', function(event) {
             console.log('Listener started');
                 console.log('Received event: ', event);
+                console.log('event.data.name: ', event.data.name);
                 dataLayer.push({
                     event: 'salesforce_event',
                     date: event.data.date,

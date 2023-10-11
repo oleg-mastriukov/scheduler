@@ -41,21 +41,10 @@
         console.log('Listener starts here');
         window.addEventListener('sfgtm', function(event) {
             console.log('Listener started');
-                
                 console.log('Received event: ', JSON.stringify(event));
-                console.log('event.data: ', event.data);
-                console.log('event.data.name: ', event.data.name);
-            
-                dataLayer.push({
-                    event: 'salesforce_event',
-                    date: event.data.date,
-                    email:event.data.email,
-                    first_name:event.data.first_name,
-                    last_name:event.data.last_name,
-                    name:event.data.name,
-                    store:event.data.store,
-                    time:event.data.time
-                })
+                console.log('event.detail: ', event.detail);
+                console.log('event.detail.name: ', event.detail.name);
+                dataLayer.push({event.detail})
         });
     </script>
 

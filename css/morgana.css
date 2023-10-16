@@ -114,7 +114,9 @@
 #lightningLocator .slds-radio--button [type=radio]:checked + .slds-radio--button__label {
   background-color: #80a7ae;
 }
-#lightningLocator input[type=text]:not(:read-only):focus {
+#lightningLocator input[type=text]:not(:read-only):focus,
+#lightningLocator input[type=tel]:not(:read-only):focus,
+#lightningLocator input[type=email]:not(:read-only):focus {
   border-color: #80a7ae;
   box-shadow: 0 0 20px rgba(128, 167, 174, 0.3);
 }

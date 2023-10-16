@@ -148,7 +148,9 @@
         }
     }
 
-    input[type=text]:not(:read-only):focus {
+    input[type=text]:not(:read-only):focus,
+    input[type=tel]:not(:read-only):focus,
+    input[type=email]:not(:read-only):focus {
         border-color: #80a7ae;
         box-shadow: 0 0 20px rgba(128,167,174,.3);
     }

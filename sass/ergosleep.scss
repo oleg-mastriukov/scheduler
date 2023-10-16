@@ -1,6 +1,6 @@
-//body, html {
-//    font-size: 62.5%;
-//}
+body, html {
+    font-size: 62.5%;
+}
 
 @font-face {
     font-family: 'Beausite';
@@ -102,7 +102,7 @@
 
 #lightningLocator {
     color: #212121;
-    font-size: 1.6rem;
+    font-size: 1.6rem !important;
 
     * {
         font-family: 'Beausite', Helvetica, Arial, sans-serif;
@@ -151,6 +151,10 @@
     }
 
     .slds-visual-picker {
+        &_vertical .slds-visual-picker__figure {
+            height: auto !important;
+        }
+
         input:checked ~ label {
             .slds-visual-picker__text {
                 border-color: #212121;
@@ -174,6 +178,10 @@
         &__text-check {
             top: 0.3rem;
             right: 1.3rem;
+
+            svg {
+                vertical-align: baseline;
+            }
         }
     }
 
@@ -319,8 +327,8 @@
         margin-right: 0.7rem;
         min-width: 8rem;
 
-        :after {
-            height: 1.6rem;
+        &:after {
+            height: 1.6rem !important;
         }
     }
 

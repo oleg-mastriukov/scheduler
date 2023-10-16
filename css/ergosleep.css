@@ -1,3 +1,7 @@
+body, html {
+  font-size: 62.5%;
+}
+
 @font-face {
   font-family: "Beausite";
   font-style: normal;
@@ -95,7 +99,7 @@
 
 #lightningLocator {
   color: #212121;
-  font-size: 1.6rem;
+  font-size: 1.6rem !important;
 }
 #lightningLocator * {
   font-family: "Beausite", Helvetica, Arial, sans-serif;
@@ -134,6 +138,9 @@
   line-height: 1.5;
   color: #212121;
 }
+#lightningLocator .slds-visual-picker_vertical .slds-visual-picker__figure {
+  height: auto !important;
+}
 #lightningLocator .slds-visual-picker input:checked ~ label .slds-visual-picker__text {
   border-color: #212121;
   box-shadow: 0 0 0 1px #212121 inset;
@@ -150,6 +157,9 @@
 #lightningLocator .slds-visual-picker__text-check {
   top: 0.3rem;
   right: 1.3rem;
+}
+#lightningLocator .slds-visual-picker__text-check svg {
+  vertical-align: baseline;
 }
 #lightningLocator .slds-button.slds-button_neutral {
   color: #212121;
@@ -263,8 +273,8 @@
   margin-right: 0.7rem;
   min-width: 8rem;
 }
-#lightningLocator .slds-path__item :after {
-  height: 1.6rem;
+#lightningLocator .slds-path__item:after {
+  height: 1.6rem !important;
 }
 #lightningLocator .slds-path__item:first-child:before,
 #lightningLocator .slds-path__item:first-child:after {

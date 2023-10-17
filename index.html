@@ -74,6 +74,9 @@
                                     value : 'https://oleg-mastriukov.github.io/scheduler2/'
                                 }
                                 ];
+                        <!-- for ext_brand two values are expected: Morgana or Ergosleep -->
+                        <!-- for ext_client_id and ext_session_id the values need to be defined prior to calling cmp.startFlow -->
+                        <!-- for ext_page populate the current page where this flow is run -->
                         console.log('Hi from callback');
                         cmp.startFlow("Inbound_New_Guest_Appointment_custom", inputVariables);
                     }

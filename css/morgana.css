@@ -1,33 +1,3 @@
-@font-face {
-  font-family: "DIN Pro";
-  font-style: normal;
-  font-weight: 400;
-  src: local("DIN Pro"), url(../fonts/DINPro.woff) format("woff");
-}
-@font-face {
-  font-family: "DIN Pro Medium";
-  font-style: normal;
-  font-weight: 400;
-  src: local("DIN Pro Medium"), url(../fonts/DINPro-Medium.woff) format("woff");
-}
-@font-face {
-  font-family: "DIN Pro Bold";
-  font-style: normal;
-  font-weight: 400;
-  src: local("DIN Pro Bold"), url(../fonts/DINPro-Bold.woff) format("woff");
-}
-@font-face {
-  font-family: "DIN Pro Italic";
-  font-style: normal;
-  font-weight: 400;
-  src: local("DIN Pro Bold Italic"), url(../fonts/DINPro-Italic.woff) format("woff");
-}
-@font-face {
-  font-family: "DIN Pro Light";
-  font-style: normal;
-  font-weight: 400;
-  src: local("DIN Pro Light"), url(../fonts/DINPro-Light.woff) format("woff");
-}
 :root {
   --lwc-colorBackgroundToastError: #BD122F !important;
   --lwc-colorTextError: #BD122F !important;
@@ -40,6 +10,9 @@
 
 #lightningLocator * {
   font-family: "DIN Pro", Verdana, sans-serif;
+}
+#lightningLocator .flowRuntimeV2 {
+  position: relative;
 }
 #lightningLocator h1, #lightningLocator h2, #lightningLocator h3, #lightningLocator h4, #lightningLocator h5, #lightningLocator h6 {
   font-family: "DIN Pro Bold", Verdana, sans-serif;

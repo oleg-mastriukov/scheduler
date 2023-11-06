@@ -1,15 +1,3 @@
-@font-face {
-  font-family: "Beausite";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Beausite"), url(../fonts/BeausiteClassicWeb-Clear.woff) format("woff"), url(../fonts/BeausiteClassicWeb-Clear.woff2) format("woff2");
-}
-@font-face {
-  font-family: "Beausite";
-  font-style: normal;
-  font-weight: 600;
-  src: local("Beausite"), url(../fonts/BeausiteClassicWeb-Medium.woff) format("woff"), url(../fonts/BeausiteClassicWeb-Medium.woff2) format("woff2");
-}
 :root {
   --lwc-colorBackgroundToastError: #F51D27 !important;
   --lwc-colorTextError: #F51D27 !important;
@@ -99,6 +87,9 @@
 }
 #lightningLocator * {
   font-family: "Beausite", Helvetica, Arial, sans-serif;
+}
+#lightningLocator .flowRuntimeV2 {
+  position: relative;
 }
 #lightningLocator h1, #lightningLocator h2, #lightningLocator h3, #lightningLocator h4, #lightningLocator h5, #lightningLocator h6 {
   font-family: "Beausite", Helvetica, Arial, sans-serif;

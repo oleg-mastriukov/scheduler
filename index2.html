@@ -1,3 +1,7 @@
+<!-- NEW/DyNAMIC -->
+<!--  -->
+
+
 <head>
     <title> Scheduler 2</title>
     <style>
@@ -44,8 +48,25 @@
 
 
     <!-- !!! This part is the scheduler snippet - here you need to pass the parameters -->
-    <script src="https://business-saas-2332.scratch.lightning.force.com/lightning/lightning.out.js"></script>
+    <script src="https://morgana2022--acceptance.sandbox.my.site.com/de/lightning/lightning.out.js"></script>
     <script>
+
+         // Function to get URL parameter
+         function getURLParameter(name) {
+            var regex = new RegExp('[?&]' + name + '=([^&#]*)');
+            var results = regex.exec(window.location.search);
+            return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+        }
+
+        // Get the 'language' parameter, default to 'en' if not present
+        var language = getURLParameter('language') || 'en';
+        
+        // Construct the new URL
+        var lightningEndpoint = "https://morgana2022--acceptance.sandbox.my.site.com/" + language;
+
+        console.log('LANGUAGE FROM URL:::'  + language);
+        console.log('lightningEndpoint :::'  + lightningEndpoint);
+
         $Lightning.use("runtime_appointmentbooking:lightningOutGuest",    // name of the Lightning app
             function() {
                 $Lightning.createComponent(
@@ -81,20 +102,9 @@
                         cmp.startFlow("Inbound_New_Guest_Appointment_custom", inputVariables);
                     }
                 );
-            }, "https://business-saas-2332.scratch.my.site.com/Scheduler2"  // Community endpoint
+            }, lightningEndpoint  // Community endpoint
         );
     </script>
 
 <div id="lightningLocator"></div>
 </body>
-
-
-
-
-
-
-
-
-
-
-<!--  -->

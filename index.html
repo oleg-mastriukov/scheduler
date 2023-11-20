@@ -60,6 +60,8 @@
         // Construct the new URL
         var lightningEndpoint = "https://morgana2022--acceptance.sandbox.my.site.com/" + language;
 
+        console.log('LANGUAGE FROM URL:::'  + language);
+        console.log('lightningEndpoint :::'  + lightningEndpoint);
 
         $Lightning.use("runtime_appointmentbooking:lightningOutGuest",    // name of the Lightning app
             function() {

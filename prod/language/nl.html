@@ -1,0 +1,105 @@
+<head>
+    <title> Scheduler 2</title>
+    <style>
+        .slds-visual-picker_vertical .slds-visual-picker__figure {
+            height: inherit !important;
+        }
+
+        .runtime_appointmentbookingFlowLocation .slds-visual-picker_vertical {
+            display: inline-flex !important;
+        }
+    </style>
+
+    <!-- ?? GTM SCript - Do you have your own version running already? - so this can be ignored.  -->
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-NSR8848Z');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <link rel="stylesheet" href="css/ergosleep.css">
+</head>
+
+
+
+<body>
+    <!-- ?? Test page head markup, you can ignore this part. -->
+
+     <!-- ?? GTM SCript - Do you have your own version running already? - so this can be ignored.  -->
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NSR8848Z"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- !!!! The most important part, this is an example of the listener that takes the event from Scheduler/Salesforce and reprocesses this to GTM / GA by publishing to the data layer -->
+    <script>
+        window.addEventListener('appointment', function(event) {
+            console.log('Received payload: ', JSON.stringify(event.detail));
+            dataLayer.push(event.detail);
+        });
+    </script>
+
+
+    <!-- !!! This part is the scheduler snippet - here you need to pass the parameters -->
+    <script src="https://morgana.my.site.com/nl/lightning/lightning.out.js"></script>
+    <script>
+        $Lightning.use("runtime_appointmentbooking:lightningOutGuest",    // name of the Lightning app
+            function() {
+                $Lightning.createComponent(
+                   "lightning:flow", // top-level component of your app
+                    {},
+                    "lightningLocator",   // the DOM location to insert the component
+                    function(cmp) {
+                         var inputVariables = [
+                                {
+                                    name : 'ext_brand',
+                                    type : 'String',
+                                    value : 'Morgana'
+                                },
+                                {
+                                    name : 'ext_client_id',
+                                    type : 'String',
+                                    value : 'mock_client_id'
+                                },
+                                                             {
+                                    name : 'ext_session_id',
+                                    type : 'String',
+                                    value : 'mock_session_id'
+                                },                                {
+                                    name : 'ext_page',
+                                    type : 'String',
+                                    value : 'https://oleg-mastriukov.github.io/scheduler2/'
+                                },
+                                {
+                                    name : 'ext_language',
+                                    type : 'String',
+                                    value : 'nl'
+                                }
+                                ];
+                        <!-- for ext_brand two values are expected: Morgana or Ergosleep -->
+                        <!-- for ext_client_id and ext_session_id the values need to be defined prior to calling cmp.startFlow -->
+                        <!-- for ext_page populate the current page where this flow is run -->
+                        console.log('Hi from callback');
+                        cmp.startFlow("Inbound_New_Guest_Appointment_custom", inputVariables);
+                    }
+                );
+            }, "https://morgana.my.site.com/nl"  // Community endpoint
+        );
+    </script>
+
+<div id="lightningLocator"></div>
+</body>
+
+
+
+
+
+
+
+
+
+
+<!--  -->
